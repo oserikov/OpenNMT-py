@@ -114,7 +114,7 @@ def model_opts(parser):
               help="Have an additional layer between the last encoder "
                    "state and the first decoder state")
     group.add('--rnn_type', '-rnn_type', type=str, default='LSTM',
-              choices=['LSTM', 'GRU', 'SRU'],
+              choices=['LSTM', 'GRU', 'SRU', 'RNN'],
               action=CheckSRU,
               help="The gate type to use in the RNNs")
     # group.add('--residual', '-residual',   action="store_true",
