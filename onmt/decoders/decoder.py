@@ -420,7 +420,7 @@ class InputFeedRNNDecoder(RNNDecoderBase):
                    hidden_size, num_layers, dropout):
         assert rnn_type != "SRU", "SRU doesn't support input feed! " \
             "Please set -input_feed 0!"
-                if rnn_type == "LSTM":
+        if rnn_type == "LSTM":
             stacked_cell = StackedLSTM
         elif rnn_type == "RNN":
             stacked_cell = StackedRNN
