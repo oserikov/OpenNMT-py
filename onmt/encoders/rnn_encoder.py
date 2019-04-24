@@ -87,7 +87,7 @@ class RNNEncoder(EncoderBase):
                            num_layers):
 
         # LSTM has hidden and cell state, other only one
-        number_of_states = 2 if rnn_type == "LSTM" else 1
+        number_of_states = 2 if rnn_type in ["LSTM", "RNN"] else 1
         # Total number of states
         self.total_hidden_dim = hidden_size * num_layers
 
